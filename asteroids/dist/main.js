@@ -25,7 +25,7 @@ eval("const MovingObject = __webpack_require__(/*! ./moving_object.js */ \"./src
   \******************************/
 /***/ ((module) => {
 
-eval("function MovingObject(options) {\r\n    this.pos = options.pos;\r\n    this.vel = options.vel;\r\n    this.radius = options.radius;\r\n    this.color = options.color;\r\n}\r\n\r\nMovingObject.prototype.draw = function(ctx) {\r\n    ctx.fillStyle = this.color;\r\n    ctx.beginPath();\r\n    debugger\r\n    ctx.arc(this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true);\r\n    ctx.fill();\r\n}\r\n\r\nmodule.exports = MovingObject;\r\n\r\nconst mo = new MovingObject({\r\n    pos: [30, 30],\r\n    vel: [10, 10],\r\n    radius: 5,\r\n    color: \"#00FF00\"\r\n});\r\n\r\n// mo.draw();\n\n//# sourceURL=webpack://dist/./src/moving_object.js?");
+eval("function MovingObject(options) {\r\n    this.pos = options.pos;\r\n    this.vel = options.vel;\r\n    this.radius = options.radius;\r\n    this.color = options.color;\r\n};\r\n\r\nMovingObject.prototype.draw = function(ctx) {\r\n    ctx.fillStyle = this.color;\r\n    ctx.beginPath();\r\n    ctx.arc(this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true);\r\n    ctx.fill();\r\n};\r\n\r\nMovingObject.prototype.move = function() {\r\nthis.pos[0] += this.vel[0];\r\nthis.pos[1] += this.vel[1];\r\n}\r\n\r\n// const mo = new MovingObject({\r\n//     pos: [30, 30],\r\n//     vel: [10, 10],\r\n//     radius: 5,\r\n//     color: \"#00FF00\"\r\n// });\r\n\r\n\r\nmodule.exports = MovingObject;\r\n\r\n\r\n\n\n//# sourceURL=webpack://dist/./src/moving_object.js?");
 
 /***/ })
 
